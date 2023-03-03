@@ -1,0 +1,9 @@
+<% if current_user %>
+	
+	<%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
+
+<% else %>
+	<%= link_to "Sign in", new_user_session_url, class: "hidden md:block block p-2 text-base text-blueGray-500 transition duration-500 ease-in-out transform rounded-full focus:shadow-outline focus:outline-none lg:ml-auto" %>
+  	<h1>Pages#index</h1>
+	<p>Find me in app/views/pages/index.html.erb</p>
+<% end %>
